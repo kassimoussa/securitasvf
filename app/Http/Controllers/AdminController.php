@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Mail\DevisMail;
 use App\Mail\SendMessageToEndUser;
 use App\Models\Devis;
 use App\Models\Message;
@@ -71,8 +72,15 @@ class AdminController extends Controller
         $devis->detail = $request->detail;
         $query = $devis->save();
 
+        $name = $request->nom;
+        $email = $request->email;
+        $mess = $request->detail; 
+
         if ($query) { 
-           /*  toastr()->success('Votre demande de devis a été enregistrer avec succès!', 'succès');   */
+
+                $send_mail = "kassimdt2@gmail.com";
+                Mail::to($send_mail)->send(new DevisMail($name, $email, $mess));
+                Mail::to($email)->send(new SendMessageToEndUser($name));
             return back()->with('success', 'Votre demande de devis a été enregistrer avec succès!');
         } else {
             /* toastr()->fail("Echec d'enregistrement de la demande !", 'Echec');   */
@@ -91,15 +99,13 @@ class AdminController extends Controller
 
         $name = $request->nom;
         $email = $request->email;
-        $mess = $request->detail;
-        $mess = $request->detail;
+        $mess = $request->detail; 
 
         if ($query) { 
 
                 $send_mail = "kassimdt2@gmail.com";
                 Mail::to($send_mail)->send(new Messages($name, $email, $mess));
-                Mail::to( $email)->send(new
-                SendMessageToEndUser($name));
+                Mail::to($email)->send(new SendMessageToEndUser($name));
 
            /*  toastr()->success('Votre demande de devis a été enregistrer avec succès!', 'succès');   */
             return back()->with('success', 'Votre message a été enregistrer avec succès!');

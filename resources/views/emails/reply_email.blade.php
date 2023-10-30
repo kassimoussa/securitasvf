@@ -1,6 +1,8 @@
 <x-mail::message>
 {{-- # Introduction --}}
 
+<img src="{{ asset('images/logo_securitas.png') }}" alt="" srcset="">
+
 Bonjour {{ $name }}
 Merci pour nous avoir contacter. Nous vous repondrons sous peu !
 
