@@ -80,8 +80,8 @@ class AdminController extends Controller
         if ($query) { 
 
                 $send_mail = "kassimdt2@gmail.com";
-                Mail::to($send_mail)->send(new DevisMail($name, $email, $mess));
-                Mail::to($email)->send(new ReplyDevis($name));
+                Mail::to($send_mail)->queue(new DevisMail($name, $email, $mess));
+                Mail::to($email)->queue(new ReplyDevis($name));
             return back()->with('success', 'Votre demande de devis a été enregistrer avec succès!');
         } else {
             /* toastr()->fail("Echec d'enregistrement de la demande !", 'Echec');   */
@@ -105,8 +105,8 @@ class AdminController extends Controller
         if ($query) { 
 
                 $send_mail = "kassimdt2@gmail.com";
-                Mail::to($send_mail)->send(new Messages($name, $email, $mess));
-                Mail::to($email)->send(new SendMessageToEndUser($name));
+                Mail::to($send_mail)->queue(new Messages($name, $email, $mess));
+                Mail::to($email)->queue(new SendMessageToEndUser($name));
 
            /*  toastr()->success('Votre demande de devis a été enregistrer avec succès!', 'succès');   */
             return back()->with('success', 'Votre message a été enregistrer avec succès!');
