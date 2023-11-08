@@ -18,8 +18,8 @@ Route::get('/', function () {
     return view('index');
 });
 
-Route::get('/email/test', function () {
-    return view('emails.test');
+Route::get('/test', function () {
+    return view('test_gmp');
 });
 
 Route::get('/login', [AdminController::class, 'accueil']);

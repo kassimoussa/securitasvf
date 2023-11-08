@@ -18,16 +18,18 @@
     <meta property="og:url" content="http://securit-as.com" />
     <meta property="og:locale" content="fr" />
     <meta property="og:title" content="SECURIT'AS - Leader de la sécurité à Djibouti" />
-    <meta property="og:description" content="SECURIT'AS SARL: Votre partenaire de confiance à Djibouti pour la protection des biens et des personnes. Spécialisés dans les services de sécurité, de gardiennage et de surveillance depuis 13 ans. Des solutions sur mesure pour répondre à tous vos besoins de sécurité">
-    <meta property="og:image" content="{{ asset("images/logo_securitas.png") }}"> 
+    <meta property="og:description"
+        content="SECURIT'AS SARL: Votre partenaire de confiance à Djibouti pour la protection des biens et des personnes. Spécialisés dans les services de sécurité, de gardiennage et de surveillance depuis 13 ans. Des solutions sur mesure pour répondre à tous vos besoins de sécurité">
+    <meta property="og:image" content="{{ asset('images/logo_securitas.png') }}">
 
     <!-- Twitter Card  -->
-    <meta name="twitter:card" content="Securit'as"/>
+    <meta name="twitter:card" content="Securit'as" />
     <meta name="twitter:url" content="http://securit-as.com">
     <meta name="twitter:title" content="SECURIT'AS - Leader de la sécurité à Djibouti">
-    <meta name="twitter:description" content="SECURIT'AS SARL: Votre partenaire de confiance à Djibouti pour la protection des biens et des personnes. Spécialisés dans les services de sécurité, de gardiennage et de surveillance depuis 13 ans. Des solutions sur mesure pour répondre à tous vos besoins de sécurité">
-    <meta name="twitter:image" content="{{ asset("images/logo_securitas.png") }}">
-    
+    <meta name="twitter:description"
+        content="SECURIT'AS SARL: Votre partenaire de confiance à Djibouti pour la protection des biens et des personnes. Spécialisés dans les services de sécurité, de gardiennage et de surveillance depuis 13 ans. Des solutions sur mesure pour répondre à tous vos besoins de sécurité">
+    <meta name="twitter:image" content="{{ asset('images/logo_securitas.png') }}">
+
 
 
     <!-- Styles -->
@@ -517,10 +519,11 @@
             <div class="row">
                 <div class="card shadow-lg p-0">
                     <div class="row gx-0">
-                        <div class="col-lg-6 align-self-stretch" style="height: 600px">
-                            <iframe class="w-100 h-100"
-                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7817.210758250839!2d43.14634800948957!3d11.580121820814869!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x162301b3334fb3e9%3A0x2063e3538c065a53!2sSalol%20Arena!5e0!3m2!1sfr!2sfr!4v1669822944515!5m2!1sfr!2sfr"
-                                width="100%" height="100%"></iframe>
+                        <div class="col-lg-6 align-self-stretch" style="height: 600px" id="mapCanvas">
+
+                            {{-- <iframe class="w-100 h-100"
+                                src="https://www.google.com/maps/embed/v1/view?key=AIzaSyAtDhN0KSnp-HZai11gX9DPtnODKhznKbA&q=SECURITAS&center=-33.8569,151.2152&zoom=18&maptype=satellite"
+                                width="100%" height="100%"></iframe> --}}
                             <!-- /.map -->
                         </div>
                         <!--/column -->
@@ -1054,6 +1057,52 @@
             ]
         });
     </script>
+
+    <script>
+        // Initialize and add the map
+        function initMap() {
+            // Latitude and longitude of the selected location
+            const myLatLng = {
+                lat: 11.5650051,
+                lng: 43.1538811
+            };
+
+            // The map, centered at selected location
+            const map = new google.maps.Map(document.getElementById("mapCanvas"), {
+                zoom: 14,
+                center: myLatLng
+            });
+
+            // Info window content
+            var contentString = " <h4> SECURIT'AS SARL </h4>";
+
+            // Add info window
+            const infowindow = new google.maps.InfoWindow({
+                content: contentString
+            });
+
+            // The marker, positioned at selected location
+            const marker = new google.maps.Marker({
+                position: myLatLng,
+                map: map,
+                title: "Siège social de SECURIT'AS"
+            });
+
+            // Marker click event: open info window
+            google.maps.event.addListener(marker, 'click', function() {
+                infowindow.open(map, marker);
+            });
+
+            // Open info window on load
+            infowindow.open(map, marker);
+        }
+
+        window.initMap = initMap;
+    </script>
+
+    <script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCPoqxVv9bVRxucHZ0EK77INZUgyx3Q0QE&callback=initMap"
+        type="text/javascript"></script>
 
     <!-- Core theme JS-->
     <script src="{{ asset('js/scripts.js') }}"></script>
