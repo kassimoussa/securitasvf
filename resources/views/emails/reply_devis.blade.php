@@ -150,7 +150,7 @@
                                         <table border="0" cellspacing="0" cellpadding="0">
                                             <tr>
                                                 <td align="center" style="border-radius: 20px;" bgcolor="#efaa26">
-                                                    <a href="#" target="_blank"
+                                                    <a href="http://securit-as.com" target="_blank"
                                                         style="font-size: 20px; font-family: Helvetica, Arial, sans-serif; color: #ffffff; text-decoration: none; color: #ffffff; text-decoration: none; padding: 15px 25px; border-radius: 20px; border: 1px solid #FFA73B; display: inline-block;">
                                                         Visiter notre site</a>
                                                 </td>

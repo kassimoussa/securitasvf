@@ -9,7 +9,7 @@ Bonjour {{ $name }}, <br>
 Merci pour nous avoir contacter. <br>
  Nous vous repondrons sous peu !
 
-<x-mail::button :url="'http://securitasv3.test'">
+<x-mail::button :url="'http://securit-as.com'">
 Visiter le site
 </x-mail::button>
 

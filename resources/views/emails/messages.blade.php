@@ -6,7 +6,7 @@
 
 Vous avez un nouveau message de <strong> {{-- {{ $name }} --}} kassim</strong>
 
-<x-mail::button :url="'http://securitasv3.test/admin'">
+<x-mail::button :url="'http://securit-as.com/login'">
 Voir le message
 </x-mail::button>
 
