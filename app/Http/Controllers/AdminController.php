@@ -9,6 +9,7 @@ use App\Models\Message;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Mail;
 use App\Mail\Messages;
+use App\Mail\ReplyDevis;
 use App\Models\User;
 
 class AdminController extends Controller
@@ -80,7 +81,7 @@ class AdminController extends Controller
 
                 $send_mail = "kassimdt2@gmail.com";
                 Mail::to($send_mail)->send(new DevisMail($name, $email, $mess));
-                Mail::to($email)->send(new SendMessageToEndUser($name));
+                Mail::to($email)->send(new ReplyDevis($name));
             return back()->with('success', 'Votre demande de devis a été enregistrer avec succès!');
         } else {
             /* toastr()->fail("Echec d'enregistrement de la demande !", 'Echec');   */

@@ -18,6 +18,10 @@ Route::get('/', function () {
     return view('index');
 });
 
+Route::get('/email/test', function () {
+    return view('emails.test');
+});
+
 Route::get('/login', [AdminController::class, 'accueil']);
 Route::post('/connexion', [AdminController::class, 'connexion']);
 
@@ -30,11 +34,11 @@ Route::group(['middleware' => ['logged']], function () {
 });
 
 Route::prefix('devis')->group(function () {
-    Route::get('/', [AdminController::class, 'index']);
+    /* Route::get('/', [AdminController::class, 'index']); */
     Route::post('/store', [AdminController::class, 'devis_store']);
 });
 
 Route::prefix('messages')->group(function () {
-    Route::get('/', [AdminController::class, 'index']);
+   /*  Route::get('/', [AdminController::class, 'index']); */
     Route::post('/store', [AdminController::class, 'message_store']);
 });

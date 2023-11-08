@@ -1,7 +1,9 @@
 <x-mail::message>
 {{-- # Introduction --}}
 
-<img src="{{ asset('images/logo_securitas.png') }}" alt="" srcset="">
+<div class="d-flex justify-content-center">
+    <img src="{{ asset('images/logo_securitas.png') }}" alt="" srcset="" style="height: 100px; width: 100%">
+</div>
 
 Bonjour {{ $name }}, <br>
 Merci pour nous avoir contacter. <br>

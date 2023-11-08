@@ -260,7 +260,7 @@
     </section>
 
     <!-- Services-->
-    <section class="page-section bg-light py-5" id="services">
+    <section class="page-section bg-light my-5" id="services">
         <div class="container">
             <div class="text-left">
                 <h3 class="section-heading text-uppercas mb-3">Nos services</h3>
@@ -416,7 +416,7 @@
         </div>
     </section>
 
-    <div class="page-section py-5 bg-light" id="partenaires">
+    <section class="page-section my-5 bg-light" id="paternaires">
 
         <div class="container">
             <div class="section-heading text-uppercas mb-5">
@@ -442,7 +442,7 @@
             </div>
         </div>
 
-    </div>
+    </section>
 
     {{-- <div class="py-5 bg-light" id="paternaires">
         <div class="text-center mb-5">

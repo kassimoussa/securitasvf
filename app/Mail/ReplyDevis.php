@@ -9,14 +9,13 @@ use Illuminate\Mail\Mailables\Content;
 use Illuminate\Mail\Mailables\Envelope;
 use Illuminate\Queue\SerializesModels;
 
-class SendMessageToEndUser extends Mailable
+class ReplyDevis extends Mailable
 {
     use Queueable, SerializesModels;
 
     /**
      * Create a new message instance.
      */
-
     public $name ;
     /**
      * Create a new message instance.
@@ -25,6 +24,7 @@ class SendMessageToEndUser extends Mailable
     {
         $this->name = $name;
     }
+
 
     /**
      * Get the message envelope.
@@ -42,7 +42,7 @@ class SendMessageToEndUser extends Mailable
     public function content(): Content
     {
         return new Content(
-            markdown: 'emails.reply_message',
+            view: 'emails.reply_devis',
         );
     }
 
