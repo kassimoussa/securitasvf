@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <meta name="google-site-verification" content="D3VSkpm4jNyMJF3Upv1SbuHxbi56V-2tkTXYtuD7Bkw" />
     <meta name="description"
-        content="SECURIT'AS SARL: Votre partenaire de confiance à Djibouti pour la protection des biens et des personnes. Spécialisés dans les services de sécurité, de gardiennage et de surveillance depuis 13 ans. Des solutions sur mesure pour répondre à tous vos besoins de sécurité" />
+        content="SECURITAS Djibouti: Votre partenaire de confiance à Djibouti pour la protection des biens et des personnes. Spécialisés dans les services de sécurité, de gardiennage et de surveillance depuis 13 ans. Des solutions sur mesure pour répondre à tous vos besoins de sécurité" />
     <meta name="author" content="Kassim Moussa Ali" />
     <meta name="robots" content="index, follow" />
     <title>Bienvenue chez SECURIT'AS - Leader de la sécurité à Djibouti </title>
@@ -20,7 +20,7 @@
     <meta property="og:locale" content="fr" />
     <meta property="og:title" content="SECURIT'AS - Leader de la sécurité à Djibouti" />
     <meta property="og:description"
-        content="SECURIT'AS SARL: Votre partenaire de confiance à Djibouti pour la protection des biens et des personnes. Spécialisés dans les services de sécurité, de gardiennage et de surveillance depuis 13 ans. Des solutions sur mesure pour répondre à tous vos besoins de sécurité">
+        content="SECURITAS Djibouti: Votre partenaire de confiance à Djibouti pour la protection des biens et des personnes. Spécialisés dans les services de sécurité, de gardiennage et de surveillance depuis 13 ans. Des solutions sur mesure pour répondre à tous vos besoins de sécurité">
     <meta property="og:image" content="{{ asset('images/logo_securitas.png') }}">
 
     <!-- Twitter Card  -->
@@ -28,7 +28,7 @@
     <meta name="twitter:url" content="http://securit-as.com">
     <meta name="twitter:title" content="SECURIT'AS - Leader de la sécurité à Djibouti">
     <meta name="twitter:description"
-        content="SECURIT'AS SARL: Votre partenaire de confiance à Djibouti pour la protection des biens et des personnes. Spécialisés dans les services de sécurité, de gardiennage et de surveillance depuis 13 ans. Des solutions sur mesure pour répondre à tous vos besoins de sécurité">
+        content="SECURIT'AS Djibouti: Votre partenaire de confiance à Djibouti pour la protection des biens et des personnes. Spécialisés dans les services de sécurité, de gardiennage et de surveillance depuis 13 ans. Des solutions sur mesure pour répondre à tous vos besoins de sécurité">
     <meta name="twitter:image" content="{{ asset('images/logo_securitas.png') }}">
 
 
@@ -43,11 +43,11 @@
 
     <!-- Font Awesome icons (free version)-->
     <script src="{{ asset('js/app.js') }}"></script>
+   {{--  <script defer src="{{ asset('js/bootstrap.bundle.min.js') }}"></script> --}}
     <script src="{{ asset('js/jquery-3.6.0.min.js') }}"></script>
     <script src="{{ asset('js/jquery-migrate-3.0.0.min.js') }}"></script>
     <script src="{{ asset('js/counterup.min.js') }}"></script>
     <script src="{{ asset('js/waypoints.min.js') }}"></script>
-    <script src="{{ asset('js/bootstrap.bundle.min.js') }}"></script>
     <script src="{{ asset('js/toastr.min.js') }}"></script>
     <script src="{{ asset('slick/slick.js') }}"></script>
     {{-- <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script> --}}
@@ -139,9 +139,9 @@
 
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive"
                 aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-                Menu
                 <i class="fas fa-bars ms-1"></i>
             </button>
+
             <div class="collapse navbar-collapse" id="navbarResponsive">
                 <ul class="navbar-nav text-uppercase ms-auto py-4 py-lg-0">
                     <li class="nav-item my-2">
@@ -652,15 +652,25 @@
                 </p>
             </div>
 
-            <div class="d-flex justify-content-between my-3">
-                <div class="bg-primary opacity-50 fs-6 px-2 rounded">
+            {{-- <div class="d-flex justify-content-between my-3">
+                <div class="bg-primary opacity-50 fs-6 p-2 rounded">
                     <a href="tel:+25321342087" class="text-dark"><i class="fas fa-phone"> </i> 21342087</a>
                 </div>
-                <div class="bg-primary opacity-50 fs-6 px-2 rounded">
+                <div class="bg-primary opacity-50 fs-6 p-2 rounded">
                     <a href="mailto:djiboutisecuritas@gmail.com" class="text-dark"><i class="fas fa-at"> </i>
                         djiboutisecuritas@gmail.com</a>
                 </div>
+            </div> --}}
+            <div class="d-flex flex-column flex-sm-row justify-content-between my-3">
+                <div class="bg-primary opacity-50 fs-6 p-2 rounded mb-2 mb-sm-0">
+                    <a href="tel:+25321342087" class="text-dark"><i class="fas fa-phone"></i> 21342087</a>
+                </div>
+                <div class="bg-primary opacity-50 fs-6 p-2 rounded">
+                    <a href="mailto:djiboutisecuritas@gmail.com" class="text-dark"><i class="fas fa-at"></i>
+                        djiboutisecuritas@gmail.com</a>
+                </div>
             </div>
+            
 
             <div class="">
                 <form action="{{ url('/messages/store') }}" method="post" class="">
@@ -822,15 +832,15 @@
                 <div class="modal-body text-center">
                     <h3 class="my-3">Zones Industrielles</h3>
 
-                    <div class="row align-items-center">
-                        <div class="col-3">
+                    <div class="row align-items-center flex-column flex-sm-row">
+                        <div class="col-md-3">
                             <span class="fa-stack fa-5x">
                                 <i class="fas fa-square fa-stack-2x text-secondary"></i>
                                 <i class="fas fa-industry fa-stack-1x fa-inverse"></i>
                             </span>
                         </div>
 
-                        <div class="col-9 text-start">
+                        <div class="col-md-9 text-start">
                             <p class=" ">
                                 <i class="fas fa-check text-sucess"></i>
                                 Sécurisation des zones industrielles contre les vols et les
@@ -858,15 +868,15 @@
                 <div class="modal-body text-center">
                     <h3 class="my-3">Sièges sociaux</h3>
 
-                    <div class="row align-items-center">
-                        <div class="col-3">
+                    <div class="row align-items-center flex-column flex-sm-row">
+                        <div class="col-md-3">
                             <span class="fa-stack fa-5x">
                                 <i class="fas fa-square fa-stack-2x text-secondary"></i>
                                 <i class="fas fa-building-columns fa-stack-1x fa-inverse"></i>
                             </span>
                         </div>
 
-                        <div class="col-9 text-start">
+                        <div class="col-md-9 text-start">
                             <p class=" ">
                                 <i class="fas fa-check text-sucess"></i>
                                 Sécurisation des locaux et des bureaux d'entreprise.
@@ -893,15 +903,15 @@
                 <div class="modal-body text-center">
                     <h3 class="my-3">Résidences</h3>
 
-                    <div class="row align-items-center">
-                        <div class="col-3">
+                    <div class="row align-items-center flex-column flex-sm-row">
+                        <div class="col-md-3">
                             <span class="fa-stack fa-5x">
                                 <i class="fas fa-square fa-stack-2x text-secondary"></i>
                                 <i class="fas fa-house fa-stack-1x fa-inverse"></i>
                             </span>
                         </div>
 
-                        <div class="col-9 text-start">
+                        <div class="col-md-9 text-start">
                             <p class=" ">
                                 <i class="fas fa-check text-sucess"></i>
                                 Services de sécurité résidentielle pour les maisons
@@ -929,15 +939,15 @@
                 <div class="modal-body text-center">
                     <h3 class="my-3">Banques</h3>
 
-                    <div class="row align-items-center">
-                        <div class="col-3">
+                    <div class="row align-items-center flex-column flex-sm-row">
+                        <div class="col-md-3">
                             <span class="fa-stack fa-5x">
                                 <i class="fas fa-square fa-stack-2x text-secondary"></i>
                                 <i class="fas fa-building-columns fa-stack-1x fa-inverse"></i>
                             </span>
                         </div>
 
-                        <div class="col-9 text-start">
+                        <div class="col-md-9 text-start">
                             <p class=" ">
                                 <i class="fas fa-check text-sucess"></i>
                                 Surveillance continue pour prévenir les intrusions et les
@@ -965,15 +975,15 @@
                 <div class="modal-body text-center">
                     <h3 class="my-3">Grandes surfaces</h3>
 
-                    <div class="row align-items-center">
-                        <div class="col-3">
+                    <div class="row align-items-center flex-column flex-sm-row">
+                        <div class="col-md-3">
                             <span class="fa-stack fa-5x">
                                 <i class="fas fa-square fa-stack-2x text-secondary"></i>
                                 <i class="fas fa-shop fa-stack-1x fa-inverse"></i>
                             </span>
                         </div>
 
-                        <div class="col-9 text-start">
+                        <div class="col-md-9 text-start">
                             <p class=" ">
                                 <i class="fas fa-check text-sucess"></i>
                                 Sécurisation des grands magasins et des centres commerciaux.
