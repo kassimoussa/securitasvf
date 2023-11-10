@@ -5,6 +5,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <meta name="google-site-verification" content="D3VSkpm4jNyMJF3Upv1SbuHxbi56V-2tkTXYtuD7Bkw" />
+    <meta name="msvalidate.01" content="6F9877A1D715AF82A8EB05E0FFBDAC84" />
     <meta name="description"
         content="SECURITAS Djibouti: Votre partenaire de confiance à Djibouti pour la protection des biens et des personnes. Spécialisés dans les services de sécurité, de gardiennage et de surveillance depuis 13 ans. Des solutions sur mesure pour répondre à tous vos besoins de sécurité" />
     <meta name="author" content="Kassim Moussa Ali" />
