@@ -108,7 +108,7 @@
     <!-- Page Heading -->
     <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark">
         <div class="container-fluid">
-            <a class="navbar-brand nav-link activee" href="/"><img
+            <a class="navbar-brand nav-link activee" href="/" target="_blank"><img
                     src="{{ asset('images/logo_securitas_bgless.png') }}" height="40px" width="70px" alt="">
                 SECURIT'AS</a>
             {{-- <a class="navbar-brand @if ($pageSlug == 'accueil') {{ 'activee' }} @endif"
@@ -118,19 +118,20 @@
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse d-flex justify-content-end" id="navbarScroll">
-                {{-- <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
-                    <li class="nav-item">
-                        <a class="nav-link nav_link  @if ($pageSlug == 'devis') {{ 'activee' }} @endif "
-                            href="{{ url('devis') }}">Devis</a>
-                    </li>
+                <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
 
                     <li class="nav-item">
                         <a class="nav-link nav_link  @if ($pageSlug == 'messages') {{ 'activee' }} @endif "
                             href="{{ url('messages') }}">Messages</a>
                     </li>
 
-                </ul> --}}
-                <h3 cl> </h3>
+                    <li class="nav-item">
+                        <a class="nav-link nav_link  @if ($pageSlug == 'devis') {{ 'activee' }} @endif "
+                            href="{{ url('devis') }}">Devis</a>
+                    </li>
+
+                </ul>
+
 
                 <div class="d-flex justify-content-end">
                     <div class="nav-item dropdown dropstart">
@@ -161,20 +162,6 @@
     @stack('scripts')
 
     <script>
-        /*  $(document).ready(function() {
-                $('table.newdevis').DataTable({
-                    "paging": false,
-                    "info": false, 
-                    "ordering": true,
-                    "order": [
-                        [0, 'desc']
-                    ],
-                    "filter": true,
-                    "searching": true,
-                });
-            });
-     */
-
         window.addEventListener('alert', event => {
             toastr[event.detail.type](event.detail.message,
                 event.detail.title ?? ''), toastr.options = {
@@ -184,14 +171,12 @@
         });
 
         window.addEventListener('close-modal', event => {
-                $('.modal').modal('hide');
-            }); 
+            $('.modal').modal('hide');
+        });
 
-            window.addEventListener('eventAction', event => {
-                $('#eventAction').modal('show');
-            }); 
-
-
+        window.addEventListener('eventAction', event => {
+            $('#eventAction').modal('show');
+        });
     </script>
 
 

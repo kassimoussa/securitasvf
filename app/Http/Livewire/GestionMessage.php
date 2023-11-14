@@ -4,16 +4,20 @@ namespace App\Http\Livewire;
 
 use App\Models\Message;
 use Livewire\Component;
+use Livewire\WithPagination;
 
 class GestionMessage extends Component
 {
-    public $messages, $message_id;
+    use WithPagination;
+    protected $paginationTheme = 'bootstrap';
+    
+    public  $message_id;
     public $nom, $email, $telephone, $detail, $date_creation;
 
-    public function getMessages()
+   /*  public function getMessages()
     {
-        $this->messages = Message::orderBy('id', 'desc')->get();
-    }
+        $this->messages = Message::orderBy('id', 'desc')->paginate(10); 
+    } */
 
 
     public function close_modal()
@@ -49,7 +53,9 @@ class GestionMessage extends Component
     }
     public function render()
     {
-        $this->getMessages();
-        return view('livewire.gestion-message');
+        // $this->getMessages();
+        
+        $messages = Message::orderBy('id', 'desc')->paginate(10); 
+        return view('livewire.gestion-message', ['messages' => $messages]);
     }
 }

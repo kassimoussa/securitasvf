@@ -4,16 +4,20 @@ namespace App\Http\Livewire;
 
 use App\Models\Devis;
 use Livewire\Component;
+use Livewire\WithPagination;
 
 class GestionDevis extends Component
 {
-    public $deviss, $row, $devis_id;
+    use WithPagination;
+    protected $paginationTheme = 'bootstrap';
+
+    public $row, $devis_id;
     public $nom, $email, $telephone, $societe, $adresse, $type_service, $detail, $date_creation;
 
-    public function getDevis()
+    /* public function getDevis()
     {
-        $this->deviss = Devis::orderBy('id', 'desc')->get(); 
-    }
+        $this->deviss = Devis::orderBy('id', 'desc')->paginate(10); 
+    } */
 
     public function close_modal()
     {
@@ -67,7 +71,8 @@ class GestionDevis extends Component
     }
     public function render()
     {
-        $this->getDevis();
-        return view('livewire.gestion-devis');
+       /*  $this->getDevis(); */
+        $deviss = Devis::orderBy('id', 'desc')->paginate(10);
+        return view('livewire.gestion-devis', ['deviss' => $deviss]);
     }
 }

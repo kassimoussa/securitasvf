@@ -24,21 +24,24 @@ Route::get('/test', function () {
 
 Route::get('/login', [AdminController::class, 'accueil']);
 Route::post('/connexion', [AdminController::class, 'connexion']);
+Route::post('/store-messages', [AdminController::class, 'message_store']);
+Route::post('/store-devis', [AdminController::class, 'devis_store']);
 
 Route::group(['middleware' => ['logged']], function () {
-    Route::get('/admin', function () {
-        return view('admin.index');
+    Route::get('/messages', function () {
+        return view('admin.messages-view');
+    });
+    Route::get('/devis', function () {
+        return view('admin.devis-view');
     });
     
     Route::get('logout', [AdminController::class, 'logout']);
 });
 
-Route::prefix('devis')->group(function () {
-    /* Route::get('/', [AdminController::class, 'index']); */
+/* Route::prefix('devis')->group(function () { 
     Route::post('/store', [AdminController::class, 'devis_store']);
 });
 
-Route::prefix('messages')->group(function () {
-   /*  Route::get('/', [AdminController::class, 'index']); */
-    Route::post('/store', [AdminController::class, 'message_store']);
-});
+Route::prefix('messages')->group(function () { 
+    Route::post('/store-messages', [AdminController::class, 'message_store']);
+}); */

@@ -65,6 +65,9 @@
                 @endif
             </tbody>
         </table>
+        <div class="d-flex justify-content-center">
+            {{ $messages->links() }}
+        </div>
 
 
         <div class="modal fade" id="showMessage" tabindex="-1" aria-labelledby="showMessageLabel" aria-hidden="true"  wire:ignore.self>

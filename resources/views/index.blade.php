@@ -594,8 +594,8 @@
                                     <div>
                                         <h5 class="mb-1">E-mail</h5>
                                         <p class="mb-0">
-                                            <a href="mailto:djiboutisecuritas@gmail.com"
-                                                class="link-body">djiboutisecuritas@gmail.com</a>
+                                            <a href="mailto:contact@securit-as.com"
+                                                class="link-body">contact@securit-as.com</a>
                                         </p>
                                     </div>
                                 </div>
@@ -667,14 +667,14 @@
                     <a href="tel:+25321342087" class="text-dark"><i class="fas fa-phone"></i> 21342087</a>
                 </div>
                 <div class="bg-primary opacity-50 fs-6 p-2 rounded">
-                    <a href="mailto:djiboutisecuritas@gmail.com" class="text-dark"><i class="fas fa-at"></i>
-                        djiboutisecuritas@gmail.com</a>
+                    <a href="mailto:contact@securit-as.com" class="text-dark"><i class="fas fa-at"></i>
+                        contact@securit-as.com</a>
                 </div>
             </div>
             
 
             <div class="">
-                <form action="{{ url('/messages/store') }}" method="post" class="">
+                <form action="{{ url('/store-messages') }}" method="post" class="">
                     @csrf
                     <div class="form-group mb-2">
                         <!-- Name input-->
@@ -741,7 +741,7 @@
             </div>
 
             <div class="">
-                <form action="{{ url('/devis/store') }}" method="post" class="">
+                <form action="{{ url('/store-devis') }}" method="post" class="">
                     @csrf
                     <div class="form-group mb-2">
                         <!-- Name input-->
@@ -796,7 +796,7 @@
                         <select id="type_service" name="type_service" class="form-select">
                             <option>Type de service</option>
                             <option value="transfert">Transfert (Biens/Fonds)</option>
-                            <option value="chaffeur">Chauffeur</option>
+                            <option value="surete">Ingénierie sûreté </option>
                             <option value="gardiennage">Gardiennage</option>
                         </select>
                         <div class="invalid-feedback" data-sb-feedback="type_service:required">

@@ -24,7 +24,7 @@ class AdminController extends Controller
     public function accueil(Request $request)
     {
         if ($request->session()->has('id')) {
-            return redirect('admin');
+            return redirect('messages');
         } else {
             return view('admin.connexion');
         }
@@ -45,7 +45,7 @@ class AdminController extends Controller
             if ($request->password == $user->password) {
                 $request->session()->put('id', $user->id); 
                 $request->session()->put('name', $user->name); 
-                return redirect('admin');
+                return redirect('messages');
             } else {
                 return back()->with('fail', "Le mot de passe que vous avez entré est incorrect. Veuillez vérifier que vous avez saisi le bon mot de passe.");
             }

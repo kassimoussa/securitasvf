@@ -68,6 +68,9 @@
                 @endif
             </tbody>
         </table>
+        <div class="d-flex justify-content-center">
+            {{ $deviss->links() }}
+        </div>
 
         <div class="modal fade" id="showDevis" tabindex="-1" aria-labelledby="showDevisLabel" aria-hidden="true"
             wire:ignore.self>
@@ -141,14 +144,15 @@
                     </div>
                     <div class="modal-footer d-flex justify-content-center">
 
-                        <button class="btn btn-primary fw-bold" wire:click="delete" data-bs-dismiss="modal">Supprimer</button>
+                        <button class="btn btn-primary fw-bold" wire:click="delete"
+                            data-bs-dismiss="modal">Supprimer</button>
                         <button type="reset" class="btn btn-outline-danger  fw-bold"
                             data-bs-dismiss="modal">Annuler</button>
                     </div>
                 </div>
             </div>
         </div>
-{{-- 
+        {{-- 
         @if (Session::get('success'))
             <script>
                 toastr.success(Session::get('success'))
