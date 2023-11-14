@@ -122,7 +122,7 @@
 
                     <li class="nav-item">
                         <a class="nav-link nav_link  @if ($pageSlug == 'messages') {{ 'activee' }} @endif "
-                            href="{{ url('messages') }}">Messages</a>
+                            href="{{ url('lesmessages') }}">Messages</a>
                     </li>
 
                     <li class="nav-item">
