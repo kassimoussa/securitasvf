@@ -28,7 +28,7 @@ Route::post('/store-messages', [AdminController::class, 'message_store']);
 Route::post('/store-devis', [AdminController::class, 'devis_store']);
 
 Route::group(['middleware' => ['logged']], function () {
-    Route::get('/lesmessages', function () {
+    Route::get('/messages', function () {
         return view('admin.messages-view');
     });
     Route::get('/devis', function () {
