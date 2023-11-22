@@ -676,11 +676,12 @@
             <div class="">
                 <form action="{{ url('/store-messages') }}" method="post" class="">
                     @csrf
+                    <x-honeypot />
                     <div class="form-group mb-2">
                         <!-- Name input-->
-                        <input class="form-control" id="name" name="nom" type="text"
+                        <input class="form-control" id="name1" name="nom" type="text"
                             placeholder="Nom *" data-sb-validations="required" />
-                        <div class="invalid-feedback" data-sb-feedback="name:required">
+                        <div class="invalid-feedback" data-sb-feedback="name1:required">
                             Ce champ est requit.
                         </div>
                     </div>
@@ -743,6 +744,7 @@
             <div class="">
                 <form action="{{ url('/store-devis') }}" method="post" class="">
                     @csrf
+                    <x-honeypot />
                     <div class="form-group mb-2">
                         <!-- Name input-->
                         <input class="form-control" id="name" name="nom" type="text"

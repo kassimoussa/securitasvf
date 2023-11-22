@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\AdminController;
 use Illuminate\Support\Facades\Route;
+use Spatie\Honeypot\ProtectAgainstSpam;
 
 /*
 |--------------------------------------------------------------------------
@@ -24,8 +25,8 @@ Route::get('/test', function () {
 
 Route::get('/login', [AdminController::class, 'accueil']);
 Route::post('/connexion', [AdminController::class, 'connexion']);
-Route::post('/store-messages', [AdminController::class, 'message_store']);
-Route::post('/store-devis', [AdminController::class, 'devis_store']);
+Route::post('/store-messages', [AdminController::class, 'message_store'])->middleware(ProtectAgainstSpam::class);
+Route::post('/store-devis', [AdminController::class, 'devis_store'])->middleware(ProtectAgainstSpam::class);
 
 Route::group(['middleware' => ['logged']], function () {
     Route::get('/messages', function () {

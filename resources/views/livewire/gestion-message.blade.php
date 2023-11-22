@@ -75,7 +75,7 @@
                 <div class="modal-content">
                     <div class="modal-header bg-dark text-white d-flex ">
                         <div class="col-6 text-start">
-                            <h3 class="fw-bold">Message du {{ $date_creation }}</h3>
+                            <h3 class="fw-bold">Message de {{ $nom }}</h3>
                         </div>
 
                         <div class="col-6 text-end pe-3">
