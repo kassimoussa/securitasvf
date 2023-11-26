@@ -10,6 +10,8 @@
         content="SECURITAS Djibouti: Votre partenaire de confiance à Djibouti pour la protection des biens et des personnes. Spécialisés dans les services de sécurité, de gardiennage et de surveillance depuis 13 ans. Des solutions sur mesure pour répondre à tous vos besoins de sécurité" />
     <meta name="author" content="Kassim Moussa Ali" />
     <meta name="robots" content="index, follow" />
+  <meta name="keywords" content="Securitas, Securit'as, Securit-as, Djibouti, Securité Djibouti">
+
     <title>Bienvenue chez SECURITAS - Leader de la sécurité à Djibouti | Securité Djibouti </title>
 
     <!-- Favicon-->
@@ -44,13 +46,14 @@
 
     <!-- Font Awesome icons (free version)-->
     <script src="{{ asset('js/app.js') }}"></script>
-   {{--  <script defer src="{{ asset('js/bootstrap.bundle.min.js') }}"></script> --}}
+     <script defer src="{{ asset('js/bootstrap.bundle.min.js') }}"></script>
     <script src="{{ asset('js/jquery-3.6.0.min.js') }}"></script>
     <script src="{{ asset('js/jquery-migrate-3.0.0.min.js') }}"></script>
     <script src="{{ asset('js/counterup.min.js') }}"></script>
     <script src="{{ asset('js/waypoints.min.js') }}"></script>
     <script src="{{ asset('js/toastr.min.js') }}"></script>
     <script src="{{ asset('slick/slick.js') }}"></script>
+    {{-- <script src="{{ asset('js/bootstrap.bundle.min.js') }}"></script> --}}
     {{-- <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script> --}}
 
     <!-- Google fonts-->
@@ -671,7 +674,7 @@
                         contact@securit-as.com</a>
                 </div>
             </div>
-            
+
 
             <div class="">
                 <form action="{{ url('/store-messages') }}" method="post" class="">
@@ -1031,6 +1034,9 @@
         });
     </script> --}}
 
+    <!-- Core theme JS-->
+    <script src="{{ asset('js/scripts.js') }}"></script>
+
     <script>
         $(".count").counterUp({
             delay: 10,
@@ -1114,12 +1120,11 @@
         window.initMap = initMap;
     </script>
 
+
     <script async defer
         src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCPoqxVv9bVRxucHZ0EK77INZUgyx3Q0QE&callback=initMap"
         type="text/javascript"></script>
 
-    <!-- Core theme JS-->
-    <script src="{{ asset('js/scripts.js') }}"></script>
 </body>
 
 </html>
