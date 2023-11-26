@@ -10,13 +10,13 @@
         content="SECURITAS Djibouti: Votre partenaire de confiance à Djibouti pour la protection des biens et des personnes. Spécialisés dans les services de sécurité, de gardiennage et de surveillance depuis 13 ans. Des solutions sur mesure pour répondre à tous vos besoins de sécurité" />
     <meta name="author" content="Kassim Moussa Ali" />
     <meta name="robots" content="index, follow" />
-    <title>Bienvenue chez SECURIT'AS - Leader de la sécurité à Djibouti </title>
+    <title>Bienvenue chez SECURITAS - Leader de la sécurité à Djibouti | Securité Djibouti </title>
 
     <!-- Favicon-->
     <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
 
     <!-- Open Graph / Facebook / LinkedIn -->
-    <meta property="og:type" content="Securit'as">
+    <meta property="og:type" content="Securitas">
     <meta property="og:url" content="http://securit-as.com" />
     <meta property="og:locale" content="fr" />
     <meta property="og:title" content="SECURIT'AS - Leader de la sécurité à Djibouti" />
@@ -25,7 +25,7 @@
     <meta property="og:image" content="{{ asset('images/logo_securitas.png') }}">
 
     <!-- Twitter Card  -->
-    <meta name="twitter:card" content="Securit'as" />
+    <meta name="twitter:card" content="Securitas" />
     <meta name="twitter:url" content="http://securit-as.com">
     <meta name="twitter:title" content="SECURIT'AS - Leader de la sécurité à Djibouti">
     <meta name="twitter:description"
