@@ -46,11 +46,10 @@
 
     <!-- Font Awesome icons (free version)-->
     <script src="{{ asset('js/app.js') }}"></script>
-     <script defer src="{{ asset('js/bootstrap.bundle.min.js') }}"></script>
     <script src="{{ asset('js/jquery-3.6.0.min.js') }}"></script>
     <script src="{{ asset('js/jquery-migrate-3.0.0.min.js') }}"></script>
-    <script src="{{ asset('js/counterup.min.js') }}"></script>
     <script src="{{ asset('js/waypoints.min.js') }}"></script>
+    <script src="{{ asset('js/counterup.min.js') }}"></script>
     <script src="{{ asset('js/toastr.min.js') }}"></script>
     <script src="{{ asset('slick/slick.js') }}"></script>
     {{-- <script src="{{ asset('js/bootstrap.bundle.min.js') }}"></script> --}}
@@ -126,9 +125,9 @@
     </style>
 </head>
 
-<body id="page-top">
+<body id="page-top" data-bs-spy="scroll" data-bs-target=".navbar" data-bs-root-margin="0px 0px -40%" data-bs-smooth-scroll="true" >
     <!-- Navigation-->
-    <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top {{-- navbar-shrink --}}" id="mainNav">
         <div class="container">
             <div class="d-flex justify-content-start">
                 <a class="navbar-brand ms-1" href="#page-top">
@@ -1035,7 +1034,8 @@
     </script> --}}
 
     <!-- Core theme JS-->
-    <script src="{{ asset('js/scripts.js') }}"></script>
+    {{-- <script src="{{ asset('js/bootstrap.bundle.min.js') }}"></script> --}}
+    <script src="{{ asset('js/scripts.js') }}" type="module"></script>
 
     <script>
         $(".count").counterUp({
