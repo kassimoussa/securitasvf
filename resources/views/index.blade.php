@@ -1082,14 +1082,15 @@
         // Initialize and add the map
         function initMap() {
             // Latitude and longitude of the selected location
+            // 11.562580156308288, 43.148099099999996
             const myLatLng = {
-                lat: 11.5650051,
-                lng: 43.1538811
+                lat: 11.562580156308288,
+                lng: 43.148099099999996
             };
 
             // The map, centered at selected location
             const map = new google.maps.Map(document.getElementById("mapCanvas"), {
-                zoom: 14,
+                zoom: 17,
                 center: myLatLng
             });
 
